@@ -48,19 +48,10 @@ public class Valor<Tipo> implements Cloneable {
 
     @Override
     public Valor clone() {
-        try {
-            return new Valor(this);
-        } catch (Exception ex) {
-        }
-
-        return null;
+        return new Valor(this);
     }
 
-    public Valor(Valor<Tipo> _valor) throws Exception {
-        if (_valor == null) {
-            throw new Exception("Valor nulo!!!");
-        }
-
+    private Valor(Valor<Tipo> _valor) {
         this.dado = _valor.getDado();
     }
 }

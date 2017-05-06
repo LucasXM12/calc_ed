@@ -1,8 +1,8 @@
 package eds.comVetor.fila;
 
+import eds.valor.*;
 import eds.excecoes.*;
 import eds.interfaces.Fila;
-import eds.valor.*;
 
 public class FilaDinamica<Tipo> implements Fila {
 

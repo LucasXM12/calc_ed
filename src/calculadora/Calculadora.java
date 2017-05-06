@@ -603,11 +603,6 @@ public class Calculadora extends javax.swing.JFrame {
         });
     }
 
-    @Override
-    public String toString() {
-        return "Calculadora{" + "NUM_DE_CHARS=" + NUM_DE_CHARS + ", btnAbreP=" + btnAbreP + ", btnApagar=" + btnApagar + ", btnApagarUltimo=" + btnApagarUltimo + ", btnCinco=" + btnCinco + ", btnDivisao=" + btnDivisao + ", btnDois=" + btnDois + ", btnExponenciacao=" + btnExponenciacao + ", btnFechaP=" + btnFechaP + ", btnLimpar=" + btnLimpar + ", btnMudarSinal=" + btnMudarSinal + ", btnMultiplicacao=" + btnMultiplicacao + ", btnNove=" + btnNove + ", btnOito=" + btnOito + ", btnQuatro=" + btnQuatro + ", btnResolver=" + btnResolver + ", btnSeis=" + btnSeis + ", btnSete=" + btnSete + ", btnSoma=" + btnSoma + ", btnSubtracao=" + btnSubtracao + ", btnTres=" + btnTres + ", btnUm=" + btnUm + ", btnVirgula=" + btnVirgula + ", btnZero=" + btnZero + ", jLabel1=" + jLabel1 + ", jLabel2=" + jLabel2 + ", tfVisor=" + tfVisor + ", tfVisorPosfixo=" + tfVisorPosfixo + ", tfVisorResult=" + tfVisorResult + '}';
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbreP;
     private javax.swing.JButton btnApagar;

@@ -4,7 +4,7 @@ import calculadora.listasDeCaracteres.*;
 import eds.comVetor.pilha.*;
 import eds.comVetor.fila.*;
 import eds.valor.*;
-import java.util.Objects;
+import java.util.*;
 
 public class Expressao {
 
@@ -276,70 +276,65 @@ public class Expressao {
     }
 
     public String getExpComLetras() {
-        return expComLetras;
+        return this.expComLetras;
     }
 
     public Double getValorExp() {
-        return valorExp;
+        return this.valorExp;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.exp);
-        hash = 71 * hash + Objects.hashCode(this.expPosfixa);
-        hash = 71 * hash + Objects.hashCode(this.expComLetras);
-        hash = 71 * hash + Objects.hashCode(this.valorExp);
-        hash = 71 * hash + Objects.hashCode(this.INCORRETO);
-        hash = 71 * hash + Objects.hashCode(this.numeros);
+        int hash = 666;
+        hash = 13 * hash + this.exp.hashCode();
+        hash = 13 * hash + this.expPosfixa.hashCode();
+        hash = 13 * hash + this.expComLetras.hashCode();
+        hash = 13 * hash + this.valorExp.hashCode();
+        hash = 13 * hash + this.INCORRETO.hashCode();
+        hash = 13 * hash + this.numeros.hashCode();
+        
         return hash;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
+        if (this == obj) 
             return true;
-        }
-        if (obj == null) {
+        
+        if (obj == null) 
             return false;
-        }
-        if (getClass() != obj.getClass()) {
+        
+        if (getClass() != obj.getClass()) 
             return false;
-        }
-        final Expressao other = (Expressao) obj;
-        if (!Objects.equals(this.exp, other.exp)) {
+        
+        Expressao aux = (Expressao) obj;
+        if (!this.exp.equals(aux.exp)) 
             return false;
-        }
-        if (!Objects.equals(this.expPosfixa, other.expPosfixa)) {
+        
+        if (!this.expPosfixa.equals(aux.expPosfixa)) 
             return false;
-        }
-        if (!Objects.equals(this.expComLetras, other.expComLetras)) {
+        
+        if (!this.expComLetras.equals(aux.expComLetras)) 
             return false;
-        }
-        if (!Objects.equals(this.valorExp, other.valorExp)) {
+        
+        if (!this.valorExp.equals(aux.valorExp)) 
             return false;
-        }
-        if (!Objects.equals(this.INCORRETO, other.INCORRETO)) {
+        
+        if (!this.INCORRETO.equals(aux.INCORRETO)) 
             return false;
-        }
-        if (!Objects.equals(this.numeros, other.numeros)) {
-            return false;
-        }
-        return true;
+        
+        return Objects.equals(this.numeros, aux.numeros);
     }
 
     @Override
     public String toString() {
-        return "Expressao{" + "exp=" + exp + ", expPosfixa=" + expPosfixa + ", expComLetras=" + expComLetras + ", valorExp=" + valorExp + ", INCORRETO=" + INCORRETO + ", numeros=" + numeros + '}';
+        return "Expressao{" + "exp=" + this.exp + ", expPosfixa=" + this.expPosfixa + ", expComLetras=" + this.expComLetras + ", valorExp=" + this.valorExp + '}';
     }
 }
-
 /*
+Tabela de pessos
 Parentização            | (     | 1
 Potenciação             | ^     | 2
 Multiplicação e Divisão | * e / | 3
 Soma e Subtração        | + e - | 4
-(1^1*1-1+1/1/(1+1))
-1-1/(1*1^1)
-1+2^3/(4^5*6)/7/8
  */
